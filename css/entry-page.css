@@ -1,0 +1,25 @@
+/* Thumbnail Styling */
+#youtube-thumbnail {
+    display: none;
+    margin-top: 10px;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  /* Section Spacing */
+  .form-section {
+    margin-bottom: 20px;
+  }
+  
+  /* Bootstrap Alert Customization */
+  .alert {
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  

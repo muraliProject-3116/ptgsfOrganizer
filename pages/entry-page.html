@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./../css/entry-page.css">
+  <link rel="icon" type="image/png" href="./../assets/images/favicon.png">
+  <title>Church Organizer</title>
+</head>
+
+<body>
+  <div id="header-container"></div>
+
+  <!-- Form Section -->
+  <div class="container mt-5">
+    <form id="form" class="p-4 border rounded" method="POST">
+      <!-- Date and Time Section -->
+      <div class="row g-3 mb-3">
+        <div class="col-12 col-md-6 col-lg-4">
+          <label for="date" class="form-label">Select Date</label>
+          <input type="date" class="form-control" id="date" name="date" required>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <label for="time" class="form-label">Select Time</label>
+          <input type="time" class="form-control" id="time" name="time" required>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <label for="session" class="form-label">Select Session</label>
+          <select class="form-select" id="session" name="session" required>
+            <option value="">Select Session</option>
+            <option value="Morning">Morning</option>
+            <option value="Afternoon">Afternoon</option>
+            <option value="Evening">Evening</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Worship and Sermon By Section -->
+      <div class="row g-3 mb-3">
+        <div class="col-12 col-md-6">
+          <label for="worship_by" class="form-label">Worship By</label>
+          <input type="text" class="form-control" id="worship_by" name="worship_by" placeholder="Enter Worship Leader" required>
+        </div>
+        <div class="col-12 col-md-6">
+          <label for="sermon_by" class="form-label">Sermon By</label>
+          <input type="text" class="form-control" id="sermon_by" name="sermon_by" placeholder="Enter Speaker" required>
+        </div>
+      </div>
+
+      <!-- Sermon Topic Section -->
+      <div class="mb-3">
+        <label for="sermon_topic" class="form-label">Sermon Topic</label>
+        <textarea class="form-control" id="sermon_topic" name="sermon_topic" rows="3" placeholder="Enter Sermon Topic" required></textarea>
+      </div>
+
+      <!-- YouTube Link and Thumbnail Preview Section -->
+      <div class="row mb-3">
+        <div class="col-12 col-md-4">
+          <label for="youtube_link" class="form-label">YouTube Link</label>
+          <input type="url" class="form-control" id="youtube_link" name="youtube_link" placeholder="Enter YouTube Link" required>
+        </div>
+        <div class="col-12 col-md-4 d-flex align-items-center">
+          <img id="youtube-thumbnail" alt="YouTube Thumbnail" class="img-fluid w-100">
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="d-grid">
+        <button type="submit" id="submit-button" class="btn btn-dark btn-lg">Submit</button>
+      </div>
+    </form>
+
+    <!-- Message Section -->
+    <div id="message" class="mt-3 text-center text-white bg-success p-3 rounded d-none">
+      <!-- Message content will be inserted dynamically -->
+    </div>
+  </div>
+
+  <div id="footer-container"></div>
+
+  <script src="./../js/entry-page.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
